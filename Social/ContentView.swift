@@ -8,14 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject
+    var viewModel: UserViewModel
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        List {
+            ForEach(viewModel.users) { user in
+                VStack {
+                    Text(user.name)
+                }
+            }
+        }
+        .onAppear {
+            viewModel.fetchUser()
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(viewModel: UserViewModel())
     }
 }
