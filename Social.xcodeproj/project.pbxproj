@@ -13,6 +13,8 @@
 		9576FA94261BCB0E00AD1719 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9576FA93261BCB0E00AD1719 /* Preview Assets.xcassets */; };
 		9576FA9E261BCCAC00AD1719 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9576FA9D261BCCAC00AD1719 /* User.swift */; };
 		9576FAA2261BD33500AD1719 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9576FAA1261BD33500AD1719 /* UserViewModel.swift */; };
+		9576FAA5261BE2EE00AD1719 /* URLSession+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9576FAA4261BE2EE00AD1719 /* URLSession+Utils.swift */; };
+		9576FAA8261BECF200AD1719 /* ObservableObject+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9576FAA7261BECF200AD1719 /* ObservableObject+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		9576FA95261BCB0E00AD1719 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9576FA9D261BCCAC00AD1719 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9576FAA1261BD33500AD1719 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		9576FAA4261BE2EE00AD1719 /* URLSession+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Utils.swift"; sourceTree = "<group>"; };
+		9576FAA7261BECF200AD1719 /* ObservableObject+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableObject+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				9576FA90261BCB0E00AD1719 /* Assets.xcassets */,
 				9576FA95261BCB0E00AD1719 /* Info.plist */,
 				9576FA92261BCB0E00AD1719 /* Preview Content */,
+				9576FAA4261BE2EE00AD1719 /* URLSession+Utils.swift */,
+				9576FAA7261BECF200AD1719 /* ObservableObject+Utils.swift */,
 			);
 			path = Social;
 			sourceTree = "<group>";
@@ -164,6 +170,8 @@
 				9576FAA2261BD33500AD1719 /* UserViewModel.swift in Sources */,
 				9576FA8D261BCB0D00AD1719 /* SocialApp.swift in Sources */,
 				9576FA9E261BCCAC00AD1719 /* User.swift in Sources */,
+				9576FAA5261BE2EE00AD1719 /* URLSession+Utils.swift in Sources */,
+				9576FAA8261BECF200AD1719 /* ObservableObject+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

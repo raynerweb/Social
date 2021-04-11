@@ -13,15 +13,24 @@ struct ContentView: View {
     var viewModel: UserViewModel
     
     var body: some View {
-        List {
-            ForEach(viewModel.users) { user in
+        Group{
+            if viewModel.loading {
                 VStack {
-                    Text(user.name)
+                    ProgressView()
+                    Text("Aguarde! Carregando..")
+                }
+            } else {
+                List {
+                    ForEach(viewModel.users) { user in
+                        VStack {
+                            Text(user.name)
+                        }
+                    }
                 }
             }
         }
         .onAppear {
-            viewModel.fetchUser()
+            viewModel.fetchUsers()
         }
     }
 }
