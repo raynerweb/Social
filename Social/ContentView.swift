@@ -35,11 +35,24 @@ struct ContentView: View {
                 
             }
             .navigationTitle("Usuários")
-            .navigationBarItems(trailing:
-                NavigationLink(destination: AddUserView(viewModel: viewModel)) {
-                    Text("Add User")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink(destination: AddUserView(viewModel: viewModel)) {
+                        Image(systemName: "Contacts")
+                            .resizable()
+                            .padding(6)
+                            .frame(width: 24, height: 24)
+                            .background(Color.blue)
+                            .clipShape(Circle())
+                            .foregroundColor(.white)
+                    }
                 }
-            )
+            }
+//            .navigationBarItems(trailing:
+//                                    NavigationLink(destination: AddUserView(viewModel: viewModel)) {
+//                                        Text("Add User")
+//                                    }
+//            )
             .environmentObject(PostViewModel())
         }
         .onAppear {

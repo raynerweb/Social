@@ -36,7 +36,7 @@ struct AddUserView: View {
             }
             Spacer()
             Button("Add User") {
-                let user = User(id: 0, name: name, username: username, email: email)
+                let user = User(id: UUID().hashValue, name: name, username: username, email: email)
                 viewModel.addUser(user: user)
                 self.mode.wrappedValue.dismiss()
             }
