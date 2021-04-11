@@ -6,14 +6,56 @@
 //
 
 import Foundation
-
+import Combine
 
 class UserViewModel: ObservableObject {
     
-    @Published
-    private(set) var users = [User]()
+    //BOV = Bateu o Olho e Viu
+    private let kBaseURL = "https://jsonplaceholder.typicode.com"
     
-    func fetchUser() {
+    @Published
+    private(set) var users = [User]() {
+        didSet {
+            loading = false
+        }
+    }
+    
+    @Published
+    private(set) var loading = false
+    
+    private var anyCancellable: AnyCancellable?
+    
+    func fetchUsers() {
+        anyCancellable?.cancel()
+        
+        if let url = URL(string: "\(kBaseURL)/users") {
+            let session = URLSession.shared
+            let request = URLRequest(url: url)
+            
+            loading = true
+            anyCancellable = session.dataTaskPublisher(for: request)
+                .tryMap( { (entity) -> Data in
+                    let (data, resp) = entity
+                    
+                    guard let response = resp as? HTTPURLResponse,
+                          response.statusCode >= 200 &&
+                            response.statusCode < 300 else { throw URLError(.badServerResponse) }
+                    return data
+                })
+                .decode(type: [User].self, decoder: JSONDecoder())
+                .breakpointOnError()
+                .receive(on: DispatchQueue.main)
+                .sink(receiveCompletion: sinkError(_:)) {
+                    self.users = $0;
+                }
+        }
+    }
+    
+    func addUser(user: User){
+        users.append(user)
+    }
+    
+    func oldFetchUser() {
         
         let session = URLSession.shared
         
@@ -30,13 +72,7 @@ class UserViewModel: ObservableObject {
             task.resume()
             
         }
-        
-        
-        
-        
-        
-        
-        
+
         let main = DispatchQueue.main // Thread principal,
         
         DispatchQueue.global(qos: .background) // Baixa prioridade de execucao

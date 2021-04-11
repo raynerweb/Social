@@ -7,15 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		951F902B262377B600A51E7C /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951F902A262377B600A51E7C /* PostView.swift */; };
+		951F902E26237AEA00A51E7C /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951F902D26237AEA00A51E7C /* PostViewModel.swift */; };
+		951F903126237F5700A51E7C /* PostUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951F903026237F5700A51E7C /* PostUser.swift */; };
+		951F90352623860900A51E7C /* AddUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951F90342623860900A51E7C /* AddUserView.swift */; };
 		9576FA8D261BCB0D00AD1719 /* SocialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9576FA8C261BCB0D00AD1719 /* SocialApp.swift */; };
 		9576FA8F261BCB0D00AD1719 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9576FA8E261BCB0D00AD1719 /* ContentView.swift */; };
 		9576FA91261BCB0E00AD1719 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9576FA90261BCB0E00AD1719 /* Assets.xcassets */; };
 		9576FA94261BCB0E00AD1719 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9576FA93261BCB0E00AD1719 /* Preview Assets.xcassets */; };
 		9576FA9E261BCCAC00AD1719 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9576FA9D261BCCAC00AD1719 /* User.swift */; };
 		9576FAA2261BD33500AD1719 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9576FAA1261BD33500AD1719 /* UserViewModel.swift */; };
+		9576FAA5261BE2EE00AD1719 /* URLSession+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9576FAA4261BE2EE00AD1719 /* URLSession+Utils.swift */; };
+		9576FAA8261BECF200AD1719 /* ObservableObject+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9576FAA7261BECF200AD1719 /* ObservableObject+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		951F902A262377B600A51E7C /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		951F902D26237AEA00A51E7C /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		951F903026237F5700A51E7C /* PostUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostUser.swift; sourceTree = "<group>"; };
+		951F90342623860900A51E7C /* AddUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserView.swift; sourceTree = "<group>"; };
 		9576FA89261BCB0D00AD1719 /* Social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Social.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9576FA8C261BCB0D00AD1719 /* SocialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialApp.swift; sourceTree = "<group>"; };
 		9576FA8E261BCB0D00AD1719 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -24,6 +34,8 @@
 		9576FA95261BCB0E00AD1719 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9576FA9D261BCCAC00AD1719 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9576FAA1261BD33500AD1719 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		9576FAA4261BE2EE00AD1719 /* URLSession+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Utils.swift"; sourceTree = "<group>"; };
+		9576FAA7261BECF200AD1719 /* ObservableObject+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableObject+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		951F90292623779D00A51E7C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				951F902A262377B600A51E7C /* PostView.swift */,
+				951F90342623860900A51E7C /* AddUserView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		9576FA80261BCB0D00AD1719 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +77,7 @@
 		9576FA8B261BCB0D00AD1719 /* Social */ = {
 			isa = PBXGroup;
 			children = (
+				951F90292623779D00A51E7C /* Views */,
 				9576FAA0261BD32600AD1719 /* ViewModel */,
 				9576FA9C261BCC9C00AD1719 /* Model */,
 				9576FA8C261BCB0D00AD1719 /* SocialApp.swift */,
@@ -63,6 +85,8 @@
 				9576FA90261BCB0E00AD1719 /* Assets.xcassets */,
 				9576FA95261BCB0E00AD1719 /* Info.plist */,
 				9576FA92261BCB0E00AD1719 /* Preview Content */,
+				9576FAA4261BE2EE00AD1719 /* URLSession+Utils.swift */,
+				9576FAA7261BECF200AD1719 /* ObservableObject+Utils.swift */,
 			);
 			path = Social;
 			sourceTree = "<group>";
@@ -79,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				9576FA9D261BCCAC00AD1719 /* User.swift */,
+				951F903026237F5700A51E7C /* PostUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -87,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				9576FAA1261BD33500AD1719 /* UserViewModel.swift */,
+				951F902D26237AEA00A51E7C /* PostViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -160,10 +186,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				951F902E26237AEA00A51E7C /* PostViewModel.swift in Sources */,
+				951F902B262377B600A51E7C /* PostView.swift in Sources */,
 				9576FA8F261BCB0D00AD1719 /* ContentView.swift in Sources */,
 				9576FAA2261BD33500AD1719 /* UserViewModel.swift in Sources */,
 				9576FA8D261BCB0D00AD1719 /* SocialApp.swift in Sources */,
+				951F903126237F5700A51E7C /* PostUser.swift in Sources */,
 				9576FA9E261BCCAC00AD1719 /* User.swift in Sources */,
+				951F90352623860900A51E7C /* AddUserView.swift in Sources */,
+				9576FAA5261BE2EE00AD1719 /* URLSession+Utils.swift in Sources */,
+				9576FAA8261BECF200AD1719 /* ObservableObject+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

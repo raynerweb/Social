@@ -13,15 +13,37 @@ struct ContentView: View {
     var viewModel: UserViewModel
     
     var body: some View {
-        List {
-            ForEach(viewModel.users) { user in
-                VStack {
-                    Text(user.name)
+        NavigationView {
+            Group{
+                if viewModel.loading {
+                    VStack {
+                        ProgressView()
+                        Text("Aguarde! Carregando..")
+                    }
+                } else {
+                    List {
+                        ForEach(viewModel.users) { user in
+                            NavigationLink(destination: PostView(user: user)) {
+                                VStack {
+                                    Text(user.name)
+                                }
+                            }
+                        }
+                    }
                 }
+                
+                
             }
+            .navigationTitle("Usuários")
+            .navigationBarItems(trailing:
+                NavigationLink(destination: AddUserView(viewModel: viewModel)) {
+                    Text("Add User")
+                }
+            )
+            .environmentObject(PostViewModel())
         }
         .onAppear {
-            viewModel.fetchUser()
+            viewModel.fetchUsers()
         }
     }
 }

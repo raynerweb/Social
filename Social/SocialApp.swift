@@ -22,13 +22,13 @@ struct SocialApp: App {
         
         if let json = try? JSONEncoder().encode(user) {
             let jsonString = String(data: json, encoding: .utf8)
-            print(jsonString)
+//            print(jsonString)
             
             do {
                 let sameUser = try JSONDecoder().decode(User.self, from: json)
-                print(sameUser)
+//                print(sameUser)
             } catch (let error) {
-                print (error)
+//                print (error)
             }
             
         }
@@ -37,6 +37,7 @@ struct SocialApp: App {
     }
     var body: some Scene {
         WindowGroup {
+//            AddUserView(viewModel: UserViewModel())
             ContentView(viewModel: UserViewModel())
         }
     }
