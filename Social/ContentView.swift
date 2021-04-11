@@ -31,9 +31,16 @@ struct ContentView: View {
                         }
                     }
                 }
+                
+                
             }
             .navigationTitle("Usuários")
-//                        .environmentObject(PostViewModel())
+            .navigationBarItems(trailing:
+                NavigationLink(destination: AddUserView(viewModel: viewModel)) {
+                    Text("Add User")
+                }
+            )
+            .environmentObject(PostViewModel())
         }
         .onAppear {
             viewModel.fetchUsers()

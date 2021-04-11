@@ -11,8 +11,19 @@ struct PostView: View {
     
     let user: User
     
+    @EnvironmentObject
+    var viewModel: PostViewModel
+    
     var body: some View {
-        Text(user.name)
+        Group {
+            List{
+                ForEach(viewModel.listPost) { postUser in
+                    Text(postUser.title)
+                }
+            }
+        }.onAppear {
+            viewModel.fetchPosts(user: user)
+        }
     }
 }
 

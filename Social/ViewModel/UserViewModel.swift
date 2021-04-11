@@ -48,8 +48,11 @@ class UserViewModel: ObservableObject {
                 .sink(receiveCompletion: sinkError(_:)) {
                     self.users = $0;
                 }
-                
-            }
+        }
+    }
+    
+    func addUser(user: User){
+        users.append(user)
     }
     
     func oldFetchUser() {

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		951F902B262377B600A51E7C /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951F902A262377B600A51E7C /* PostView.swift */; };
 		951F902E26237AEA00A51E7C /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951F902D26237AEA00A51E7C /* PostViewModel.swift */; };
+		951F903126237F5700A51E7C /* PostUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951F903026237F5700A51E7C /* PostUser.swift */; };
+		951F90352623860900A51E7C /* AddUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951F90342623860900A51E7C /* AddUserView.swift */; };
 		9576FA8D261BCB0D00AD1719 /* SocialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9576FA8C261BCB0D00AD1719 /* SocialApp.swift */; };
 		9576FA8F261BCB0D00AD1719 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9576FA8E261BCB0D00AD1719 /* ContentView.swift */; };
 		9576FA91261BCB0E00AD1719 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9576FA90261BCB0E00AD1719 /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 /* Begin PBXFileReference section */
 		951F902A262377B600A51E7C /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		951F902D26237AEA00A51E7C /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		951F903026237F5700A51E7C /* PostUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostUser.swift; sourceTree = "<group>"; };
+		951F90342623860900A51E7C /* AddUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserView.swift; sourceTree = "<group>"; };
 		9576FA89261BCB0D00AD1719 /* Social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Social.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9576FA8C261BCB0D00AD1719 /* SocialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialApp.swift; sourceTree = "<group>"; };
 		9576FA8E261BCB0D00AD1719 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				951F902A262377B600A51E7C /* PostView.swift */,
+				951F90342623860900A51E7C /* AddUserView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -98,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				9576FA9D261BCCAC00AD1719 /* User.swift */,
+				951F903026237F5700A51E7C /* PostUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -185,7 +191,9 @@
 				9576FA8F261BCB0D00AD1719 /* ContentView.swift in Sources */,
 				9576FAA2261BD33500AD1719 /* UserViewModel.swift in Sources */,
 				9576FA8D261BCB0D00AD1719 /* SocialApp.swift in Sources */,
+				951F903126237F5700A51E7C /* PostUser.swift in Sources */,
 				9576FA9E261BCCAC00AD1719 /* User.swift in Sources */,
+				951F90352623860900A51E7C /* AddUserView.swift in Sources */,
 				9576FAA5261BE2EE00AD1719 /* URLSession+Utils.swift in Sources */,
 				9576FAA8261BECF200AD1719 /* ObservableObject+Utils.swift in Sources */,
 			);
